@@ -26,6 +26,7 @@ p {
   font-size: 1.3rem;
   font-family: "Open Sans";
   font-weight: 300;
+  color: #777777;
 }
 a {
   text-decoration: none;
@@ -255,10 +256,10 @@ ul li {
 }
 
 /* About section design */
-.about {
+/* .about {
   margin: 3rem 0;
   width: 100%;
-}
+} */
 .about-left {
   flex: 1;
   width: 50vw;
@@ -954,6 +955,7 @@ form {
   color: #444444;
 }
 /* Blog section design */
+
 .blog-items {
   width: 100%;
   display: flex;
@@ -969,6 +971,10 @@ form {
   width: 100%;
   margin-bottom: 1.5rem;
 }
+.blog-lg-img img {
+  width: 100%;
+  object-fit: cover;
+}
 .blog-info {
   display: flex;
   font-size: 1.3rem;
@@ -981,17 +987,9 @@ form {
   color: #fcaaaa;
 }
 .blog-title {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
   color: #0075b7;
-}
-.blog-lg p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 2.4rem;
-  color: #777777;
   text-align: left;
 }
 .blog-sm-bottom {
@@ -1005,8 +1003,8 @@ form {
 }
 .blog-sm-img {
   width: 100%;
-  max-width: 26rem;
-  height: 20rem;
+  max-width: 37rem;
+  /* height: 20rem; */
   margin-right: 2rem;
 }
 .blog-sm-img img {
@@ -1107,6 +1105,7 @@ form {
 .sub-container p {
   font-size: 1.3rem;
   line-height: 2.4rem;
+  color: #ffffff;
 }
 .sub-container input {
   display: block;
@@ -1186,8 +1185,6 @@ form {
   height: 3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-
-  /* overflow: hidden; */
 }
 .post-img img {
   width: 100%;
@@ -1207,6 +1204,7 @@ form {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2rem;
+  color: #ffffff;
 }
 .bubscribe-box {
   display: flex;
@@ -1304,6 +1302,9 @@ form {
     width: 100%;
     margin: 0;
   }
+  .about-right {
+    text-align: left;
+  }
   .service {
     padding: 1rem;
   }
@@ -1369,8 +1370,14 @@ form {
     flex-direction: column;
   }
   .blog-lg {
-    flex: 1;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-title {
+    text-align: left;
   }
   .blog-lg-img {
     width: 100%;
@@ -1394,13 +1401,9 @@ form {
     width: 100%;
     margin-bottom: 2rem;
   }
-  .blog-sm-img img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-  }
   .img-item {
     width: 50%;
+    max-width: 37rem;
   }
   .subscribe {
     padding: 1rem;
