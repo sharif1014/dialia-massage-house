@@ -397,6 +397,11 @@ ul li {
   margin-left: 15px;
 }
 /* Service section design */
+/* @media only screen and (min-width: 1140px) {
+  .service {
+    
+  }
+} */
 .service {
   width: 100%;
   max-width: 1920px;
@@ -1465,7 +1470,10 @@ form {
   .carousel-caption h1 {
     font-size: 40px;
   }
-
+  .feature-left,
+  .feature-right {
+    width: 766px;
+  }
   .about {
     margin-top: 30px;
   }
@@ -1483,7 +1491,7 @@ form {
     padding: 10px;
   }
   .service-left {
-    height: 100%;
+    gap: 20px;
   }
   .service-item {
     width: 48%;
@@ -1585,6 +1593,7 @@ form {
   }
   .subscribe {
     padding: 10px;
+    margin: 20px 0;
   }
   .sub-container {
     width: 100%;
@@ -1592,10 +1601,13 @@ form {
   }
   .footer-items {
     width: 100%;
-    gap: 3;
+    gap: 30px;
   }
   .footer-item {
-    width: 46%;
+    width: 47%;
+  }
+  .footer-item:nth-child(3) {
+    padding-left: 0;
   }
 }
 

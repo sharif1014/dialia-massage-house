@@ -5,10 +5,13 @@ $(document).ready(function () {
         margin: 10,
         autoplay:true,
         responsive: {
-            0: {
-                items: 1
+           0: {
+                items:1
             },
             768: {
+                items:1
+            },
+            1000: {
                 items:2
             }
            
