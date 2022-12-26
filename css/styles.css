@@ -3,12 +3,13 @@
 /* 
 font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
-
 */
 
 /* Reset styling */
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,27 +18,41 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1rem;
+  font-size: 10px;
   font-family: "Poppins", sans-serif;
 }
 
 /* Common styling */
 p {
-  font-size: 1.3rem;
-  font-family: "Open Sans";
-  font-weight: 300;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
   color: #777777;
 }
 a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #0075b7;
   text-decoration: none;
-  color: inherit;
 }
 ul li {
   display: inline-block;
   list-style: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
 }
-
+.heading-3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: #444444;
+}
 /* Topbar css */
 .topbar {
   width: 100%;
@@ -46,7 +61,7 @@ ul li {
   color: #ffffff;
 }
 .top-content {
-  height: 5rem;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
 }
@@ -58,27 +73,27 @@ ul li {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
+  font-size: 14px;
+  line-height: 21px;
   color: #ffffff;
 }
 .top-left span:first-child {
   margin-right: 10px;
   padding-right: 10px;
-  border-right: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .top-right {
   display: flex;
 }
 .social-icon {
-  width: 28.01px;
+  width: 28px;
   height: 28px;
   background-color: #ffffff;
   color: #101010;
-  padding: 0.5rem;
+  padding: 5px;
   margin-left: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -94,11 +109,9 @@ ul li {
 /* Menu design */
 .main-menu {
   width: 100%;
-  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0;
 }
 .container,
 .container-fluid,
@@ -112,9 +125,11 @@ ul li {
 .logo {
   width: 105px;
   height: 63px;
+  margin-bottom: 10px;
 }
 .logo img {
   width: 100%;
+  object-fit: cover;
 }
 .nav-link.btn-primary {
   background: #0075b7;
@@ -148,11 +163,11 @@ ul li {
   color: #0170ae;
 }
 .navbar-toggler {
-  border-radius: 0.5rem;
-  font-size: 2.2rem;
-  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 22px;
+  padding: 5px 10px;
   color: #0170ae;
-  border: 0.12rem solid #0170ae;
+  border: 1px solid #0170ae;
 }
 /* Banner design */
 .banner {
@@ -177,9 +192,7 @@ ul li {
   top: 6%;
   left: -3%;
 }
-/* .carousel-item.active .carousel-caption {
-  top: 40%;
-} */
+
 .carousel-caption {
   width: 804px;
   height: 339px;
@@ -187,9 +200,6 @@ ul li {
   top: 30%;
   left: 0%;
   text-align: left;
-  /* transform: translate(-10%, -20%);
-  transition: 0.7s;
-  transition-delay: 0.3s; */
 }
 .carousel-caption h4 {
   font-family: "Poppins";
@@ -247,17 +257,11 @@ ul li {
   background-color: #0075b7 !important;
   opacity: 0.4;
   border-radius: 50%;
-  /* box-sizing: 0; */
 }
 .carousel-indicators button.active {
   opacity: 1;
   width: 25px !important;
 }
-/* .prev-icon,
-.next-icon {
-  font-size: 3rem;
-  color: #00ffea;
-} */
 /*Feature section design  */
 .features {
   width: 100%;
@@ -266,18 +270,18 @@ ul li {
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .feature-left,
 .feature-right {
   flex: 1;
-  width: 568.92px;
-  height: 293.89px;
-  border-radius: 0.5rem;
+  width: 569px;
+  height: 294px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 10px 20px;
 }
 
 .feature-left {
@@ -294,7 +298,7 @@ ul li {
 }
 .content-box {
   width: 65%;
-  padding: 1rem;
+  padding: 10px;
 }
 .content-box h2 {
   font-family: "Poppins";
@@ -304,25 +308,8 @@ ul li {
   line-height: 150%;
   color: #444444;
 }
-.content-box p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-
-  color: #777777;
-}
-.content-box a {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-  color: #0075b7;
-}
 .content-box i {
-  font-size: 1rem;
+  font-size: 10px;
 }
 
 /* About section design */
@@ -344,11 +331,10 @@ ul li {
 .about-right {
   flex: 1;
   text-align: left;
-  /* margin-left: 100px; */
 }
 .about-title h4 {
-  font-size: 1.4rem;
-  margin-left: 0.5rem;
+  font-size: 14px;
+  margin-left: 5px;
   color: #0075b7;
 }
 .about-right h1 {
@@ -373,7 +359,7 @@ ul li {
   margin-bottom: 22px;
 }
 .activity-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
@@ -392,23 +378,23 @@ ul li {
   margin-left: 10px;
 }
 .about-buttons {
-  margin-top: 3rem;
+  margin-top: 30px;
 }
 .btn-primary {
   background-color: #0170ae;
   color: #ffffff;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   border: none;
-  border-radius: 0.3rem;
-  font-size: 1.3rem;
+  border-radius: 03px;
+  font-size: 13px;
 }
 .btn-outline {
-  padding: 0.9rem 1.5rem;
-  border: 0.1rem solid #777777;
-  border-radius: 0.3rem;
-  font-size: 1.3rem;
+  padding: 10px 15px;
+  border: 1px solid #777777;
+  border-radius: 3px;
+  font-size: 13px;
   background: transparent;
-  margin-left: 1.5rem;
+  margin-left: 15px;
 }
 /* Service section design */
 .service {
@@ -419,12 +405,7 @@ ul li {
   padding: 90px 0;
   overflow: hidden;
 }
-.service h1,
-.testimonial h1,
-.team-section h1,
-.products h1,
-.pricing h1,
-.blogs h1 {
+.section-heading {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -453,7 +434,6 @@ ul li {
   width: 50%;
   min-width: 770px;
   height: 85%;
-  /* flex: 1; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -489,22 +469,7 @@ ul li {
 .service-heading {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
-}
-.service-heading h3 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 150%;
-  color: #444444;
-}
-.service-item p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
+  margin-bottom: 15px;
 }
 .service-heading-img {
   width: 52px;
@@ -530,18 +495,11 @@ ul li {
   width: 100%;
   object-fit: contain;
 }
-.service a {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-  color: #0075b7;
-}
+
 .view-all {
   width: 48%;
   text-decoration: underline;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 .view-all a {
   color: #0075b7;
@@ -551,36 +509,34 @@ ul li {
   width: 100%;
   max-width: 1920px;
   margin: 94px 0;
-  /* padding: 0 1rem; */
 }
 
 .item {
   width: 99%;
-  min-width: 34rem;
-  /* height: 22rem; */
-  padding: 1rem;
+  min-width: 340px;
+  padding: 10px;
   display: flex;
   align-items: center;
   background: #ffffff;
   box-shadow: 0px 0px 10px 1px rgba(0, 117, 183, 0.1);
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
   position: relative;
 }
 .item-quote {
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
-  right: 2rem;
-  bottom: 2rem;
+  right: 20px;
+  bottom: 20px;
 }
 .item-quote img {
   width: 100%;
 }
 .client-img {
   width: 20%;
-  min-width: 12rem;
+  min-width: 120px;
   position: relative;
   z-index: 3;
 }
@@ -595,22 +551,22 @@ ul li {
   border-radius: 36% 35% 35% 44% / 46% 46% 47% 49%;
   background-color: #d8f7fc;
   position: absolute;
-  top: 3rem;
+  top: 30px;
   left: 2px;
   z-index: -1;
 }
 .quote-img {
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #ffffff;
-  padding: 0.6rem;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 1rem;
-  bottom: 0rem;
+  right: 10px;
+  bottom: 0px;
   border: 1px solid #0075b7;
 }
 .quote-img img {
@@ -619,14 +575,14 @@ ul li {
   object-fit: cover;
 }
 .client-review {
-  padding: 1rem;
+  padding: 10px;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: 15px;
 }
 .rating {
-  font-size: 1.3rem;
+  font-size: 13px;
   color: #ffb800;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 .client-review p {
   font-family: "Open Sans";
@@ -638,16 +594,7 @@ ul li {
   align-items: center;
   color: #777777;
 }
-.client-review h3 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  display: flex;
-  align-items: center;
-  color: #444444;
-}
+
 .client-review h4 {
   font-family: "Poppins";
   font-style: normal;
@@ -674,8 +621,7 @@ ul li {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin-top: 15rem;
-  /* margin-left: 10rem; */
+  margin-top: 150px;
 }
 .special-left h2 {
   font-family: "Poppins";
@@ -691,17 +637,11 @@ ul li {
   font-weight: 500;
   font-size: 26px;
   line-height: 150%;
-  letter-spacing: 0.2em;
+  letter-spacing: 2px;
   color: #444444;
 }
 .special-left p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 160%;
-  color: #777777;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 .special-right {
   flex: 1;
@@ -726,40 +666,40 @@ ul li {
 .team-carousel {
   width: 100%;
   position: relative;
-  padding: 0 1rem;
+  padding: 0 10px;
 }
 .team-members {
   margin: 0 auto;
   width: 97%;
-  padding: 2rem;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 20px;
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 .member {
   width: 25%;
-  min-width: 25rem;
-  padding: 2rem 0;
+  min-width: 250px;
+  padding: 20px 0;
   background: #ffffff;
   box-shadow: 0px 0px 10px 1px rgba(0, 117, 183, 0.1);
   text-align: center;
   transition: 0.5s;
 }
 .member img {
-  width: 15rem;
-  height: 15rem;
-  margin-bottom: 2rem;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 .member h3 {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 400;
   color: #444444;
 }
 .member h4 {
-  font-size: 1.3rem;
+  font-size: 13px;
   font-weight: 400;
   color: #777777;
 }
@@ -771,13 +711,13 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 99999;
+  z-index: 99;
 }
 .arrow {
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 0.1rem solid #858484;
+  border: 1px solid #858484;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -787,7 +727,7 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 10px;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
@@ -799,13 +739,13 @@ ul li {
   transform: translate(-0%, -20%);
 }
 .social-icons .social-icon {
-  width: 2rem;
-  height: 2rem;
-  border: 0.01rem solid #c7e6f8;
-  border-radius: 0.4rem;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c7e6f8;
+  border-radius: 4px;
 }
 .social-icons .social-icon i {
-  font-size: 1.1rem;
+  font-size: 11px;
 }
 /* Appointment section design */
 .appointment {
@@ -847,38 +787,32 @@ ul li {
   margin-bottom: 16px;
 }
 .working p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #777777;
   margin-bottom: 24px;
 }
 .working-routine {
   width: 100%;
   background-color: #ffffff;
   padding: 23px 35px;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 .open,
 .closed {
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 5px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.1rem solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 .location {
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 15px;
   display: flex;
   text-align: left;
 }
 .location-icon i {
   color: #0075b7;
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 .location span,
 .open span,
@@ -895,12 +829,12 @@ ul li {
   max-width: 660px;
   flex: 1;
   background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 20px;
+  border-radius: 10px;
   text-align: left;
 }
 form {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 .form-control,
 .form-select {
@@ -920,25 +854,25 @@ form {
   width: 100%;
   max-width: 1920px;
   margin: 95px 0;
-  padding: 2rem 1rem;
+  padding: 20px 10px;
 }
 
 .product-list {
   width: 100%;
-  padding: 2rem;
+  padding: 20px;
 }
 .card {
   width: 100%;
-  max-width: 35rem;
+  max-width: 350px;
   border: none;
   position: relative;
 }
 .card-img {
   width: 100%;
-  height: 27rem;
-  border: 0.1rem solid #b0dffa;
-  border-radius: 1rem;
-  padding: 3rem 1rem;
+  height: 270px;
+  border: 1px solid #b0dffa;
+  border-radius: 10px;
+  padding: 30px 10px;
   position: relative;
 }
 .card-img img {
@@ -951,7 +885,7 @@ form {
   content: " ";
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 10px;
   background-color: #0170ae;
   position: absolute;
   top: 0;
@@ -976,7 +910,7 @@ form {
   justify-content: center;
   position: absolute;
   left: 0;
-  bottom: 1rem;
+  bottom: 10px;
   z-index: 1;
   visibility: hidden;
   opacity: 0;
@@ -986,33 +920,33 @@ form {
   background-color: #0075b7;
   color: #ffffff;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  font-size: 1.3rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 13px;
   cursor: pointer;
 }
 .card-action span {
   background-color: #ffffff;
   color: #0075b7;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  font-size: 1.4rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
   cursor: pointer;
 }
 .view {
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 .card-body {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 15px;
 }
 .price {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #777777;
 }
 .old {
-  margin-right: 1.5rem;
+  margin-right: 15px;
 }
 .tag {
   position: absolute;
@@ -1052,6 +986,7 @@ form {
 .pricing-item {
   width: 25%;
   max-width: 370px;
+  height: 100%;
   max-height: 540px;
   padding: 50px 30px;
   border-radius: 10px;
@@ -1085,8 +1020,8 @@ form {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 3rem;
+  font-size: 13px;
+  line-height: 30px;
   color: #777777;
 }
 .pricing-item h4 {
@@ -1096,6 +1031,7 @@ form {
   font-size: 16px;
   line-height: 36px;
   color: #777777;
+  margin: 17px 0;
 }
 .balance {
   font-family: "Poppins";
@@ -1137,7 +1073,7 @@ form {
 }
 .blog-lg-img {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 .blog-lg-img img {
   width: 100%;
@@ -1165,7 +1101,7 @@ form {
   color: #0075b7;
 }
 .blog-sm-bottom {
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 .blog-sm-top,
 .blog-sm-bottom {
@@ -1178,7 +1114,7 @@ form {
   max-width: 270px;
   height: 200px;
   margin-right: 25px;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   overflow: hidden;
 }
 .blog-sm-img img {
@@ -1191,33 +1127,16 @@ form {
   text-align: left;
 }
 .blog-sm-content span {
-  font-size: 1.2rem;
+  font-size: 12px;
   color: #777777;
 }
 .blog-sm-content h3 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 2rem;
-  line-height: 2.7rem;
+  font-size: 24px;
+  line-height: 27px;
   color: #444444;
-}
-.blog-sm-content p,
-.blog-lg p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-  color: #777777;
-}
-.blog-sm-content a {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-  color: #0075b7;
 }
 /* Gallery section design */
 .images-list {
@@ -1229,8 +1148,8 @@ form {
 }
 .img-item {
   width: 20%;
-  max-width: 33rem;
-  height: 15rem;
+  max-width: 330px;
+  height: 150px;
   position: relative;
 }
 .img-item img {
@@ -1254,7 +1173,7 @@ form {
   transition: 0.5s;
 }
 .img-overlay i {
-  font-size: 3rem;
+  font-size: 30px;
   color: #ffffff;
   cursor: pointer;
   z-index: 999999;
@@ -1288,11 +1207,6 @@ form {
   color: #ffffff;
 }
 .sub-container p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
   text-align: center;
   color: #ffffff;
 }
@@ -1435,7 +1349,7 @@ form {
   font-weight: 500;
 }
 .post-content span {
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: 300;
   color: #bdbcbc;
 }
@@ -1449,16 +1363,16 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 0.1rem solid #ffffff;
+  border: 1px solid #ffffff;
   margin: 30px 0;
 }
 .bubscribe-box button {
   width: 20%;
-  height: 4.2rem;
+  height: 42px;
   border: none;
   background-color: #0075b7;
   color: #ffffff;
-  border-left: 0.1rem solid #ffffff;
+  border-left: 1px solid #ffffff;
 }
 .bubscribe-box input {
   width: 80%;
@@ -1475,14 +1389,14 @@ form {
 }
 .bubscribe-box button i {
   transform: rotate(55deg);
-  font-size: 2rem;
+  font-size: 20px;
 }
 .cards-items {
-  margin-top: 2rem;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 .card-item {
   width: 40px;
@@ -1516,25 +1430,25 @@ form {
 @media (max-width: 768px) {
   .top-content {
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 10px;
   }
   .top-left span {
-    font-size: 1.3rem;
+    font-size: 13px;
   }
   .social-icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
   }
   .navbar-nav {
-    margin-top: 2rem;
-    padding: 2rem 1rem;
+    margin-top: 20px;
+    padding: 20px 10px;
   }
   .nav-link:last-child {
     margin-left: 0;
   }
   .nav-link {
-    padding: 0.5rem 1rem;
+    padding: 5px 10px;
   }
   .nav-link.btn-primary {
     width: fit-content;
@@ -1549,11 +1463,11 @@ form {
     top: 40%;
   }
   .carousel-caption h1 {
-    font-size: 4rem;
+    font-size: 40px;
   }
 
   .about {
-    margin-top: 3rem;
+    margin-top: 30px;
   }
   .about-left {
     width: 100%;
@@ -1566,11 +1480,10 @@ form {
     text-align: left;
   }
   .service {
-    padding: 1rem;
+    padding: 10px;
   }
   .service-left {
     height: 100%;
-    /* flex-direction: column; */
   }
   .service-item {
     width: 48%;
@@ -1583,7 +1496,7 @@ form {
     width: 100%;
   }
   .special-section {
-    padding: 1rem;
+    padding: 10px;
   }
   .special-left,
   .special-right {
@@ -1593,38 +1506,40 @@ form {
   .special-right-img {
     width: 100%;
     margin-left: 0;
-    margin-top: 2rem;
+    margin-top: 20px;
   }
   .member {
     width: 50%;
-    min-width: 32rem;
+    min-width: 320px;
   }
   .working {
     padding: 0;
   }
+  .working > h1 {
+    text-align: left;
+  }
   .working,
   .make-appointment {
-    flex: 1;
-    width: 100%;
+    max-width: 768px;
     margin: 0;
   }
   .client-img {
     width: 15%;
-    min-width: 10rem;
+    min-width: 100px;
   }
   .pricing {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 20px 10px;
   }
   .pricing-list {
     width: 100%;
-    gap: 1rem;
+    gap: 10px;
   }
   .pricing-item {
     width: 33%;
   }
   .blogs {
-    padding: 1rem;
+    padding: 10px;
   }
   .blog-items {
     flex-direction: column;
@@ -1633,7 +1548,7 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .blog-title {
@@ -1657,27 +1572,27 @@ form {
   .blog-sm-bottom {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 10px;
   }
   .blog-sm-img {
     width: 100%;
     max-width: 390px;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
   .img-item {
     width: 50%;
-    max-width: 37rem;
+    max-width: 370px;
   }
   .subscribe {
-    padding: 1rem;
+    padding: 10px;
   }
   .sub-container {
     width: 100%;
-    padding: 2rem;
+    padding: 20px;
   }
   .footer-items {
     width: 100%;
-    gap: 3rem;
+    gap: 3;
   }
   .footer-item {
     width: 46%;
@@ -1688,23 +1603,23 @@ form {
 @media (max-width: 390px) {
   .top-content,
   .main-menu {
-    padding: 0 1rem;
+    padding: 0 10px;
   }
   .top-left {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 1rem;
+    font-size: 10px;
   }
   .top-left span:first-child {
     margin: 0;
     padding: 0;
   }
   .top-left span {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
   .top-left span:first-child {
     border: none;
-    border-bottom: 0.1rem solid #858484;
+    border-bottom: 1px solid #858484;
   }
   .carousel-item.active .carousel-caption {
     top: 40%;
@@ -1714,35 +1629,35 @@ form {
     left: 20%;
   }
   .carousel-caption h1 {
-    font-size: 2.4rem;
+    font-size: 24px;
   }
   .features,
   .about {
-    padding: 1rem;
+    padding: 10px;
   }
   .feature-left,
   .feature-right {
-    padding: 1rem;
+    padding: 10px;
   }
 
   .content-box {
     width: 70%;
-    padding: 1rem;
+    padding: 10px;
   }
   .content-box h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   .content-box p {
-    line-height: 2rem;
+    line-height: 20px;
   }
 
   .about-right h1 {
-    font-size: 2rem;
+    font-size: 20px;
   }
   .about-right p {
-    font-size: 1.5rem;
-    line-height: 2.4rem;
+    font-size: 15px;
+    line-height: 24px;
   }
   .service-left {
     flex-direction: column;
@@ -1755,7 +1670,7 @@ form {
     text-align: left;
   }
   .team-carousel {
-    padding: 1rem;
+    padding: 10px;
   }
   .arrows {
     width: 96%;
@@ -1767,20 +1682,20 @@ form {
   }
   .member {
     width: 100%;
-    min-width: 33rem;
+    min-width: 330px;
   }
   .card {
     width: 100%;
   }
   .appointment {
-    padding: 1rem;
+    padding: 10px;
   }
 
   .pricing-list {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 30px;
   }
   .pricing-item {
     width: 100%;
@@ -1811,7 +1726,7 @@ form {
     width: 100%;
   }
   .footer {
-    padding: 1rem;
+    padding: 10px;
   }
   .footer-item {
     width: 100%;
